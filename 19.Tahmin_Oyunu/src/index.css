@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #222831;
+    color: #fff;
+}
+
+.button {
+    background-color: gold;
+    color: red;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    margin: 10px;
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+    margin-top: 3px;
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 5fr 5fr 5fr 5fr;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+
+.front-img {
+    width: 150px;
+    height: 150px;
+    margin-top: 3px;
+    position: absolute;
+    transform: rotateY(90deg);
+    transition: 300ms all;
+}
+
+.back-img {
+    width: 150px;
+    height: 150px;
+    margin-top: 3px;
+    transition: 300ms all;
+
+}
+
+.cards-css {
+    position: relative;
+}
+
+#rotated {
+    transform: rotateY(0deg);
+}
