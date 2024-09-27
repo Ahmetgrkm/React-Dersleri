@@ -1,0 +1,101 @@
+/* Testimonials Ana Stil */
+.testimonials {
+  padding: 40px;
+  background-color: #f4f4f4;
+  text-align: center;
+  perspective: 1000px;
+  /* 3D perspektif efekti */
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  /* Kartlar arasındaki boşluk */
+  max-width: 1000px;
+  /* Maksimum genişlik */
+  margin: 50px auto;
+  /* Ortalamak için */
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  position: relative;
+  animation: fadeInTitle 1.2s ease-in-out;
+  width: 100%;
+}
+
+/* Testimonial Kart Stili */
+.testimonial {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+  width: 300px;
+  /* Kart genişliği */
+  height: 225px;
+  transition: transform 0.7s ease, box-shadow 0.5s ease;
+  transform: rotateY(0deg);
+  /* 3D başlangıç pozisyonu */
+  display: inline-block;
+}
+
+/* Hover Efekti - 3D Dönüşüm */
+.testimonial:hover {
+  transform: rotateY(10deg) rotateX(5deg);
+  /* 3D döndürme efekti */
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3);
+  /* Gölgeleme artışı */
+}
+
+.testimonial p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #777;
+  font-style: italic;
+}
+
+/* Kartlara Giriş Animasyonu */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Başlık Fade-in Animasyonu */
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animasyon Gecikmeleri - Farklı Zamanlamalar */
+.testimonial:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+.testimonial:nth-child(even) {
+  animation-delay: 0.4s;
+}

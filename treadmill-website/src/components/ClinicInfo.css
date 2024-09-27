@@ -1,0 +1,202 @@
+/* Klinik Bilgisi Alanı */
+.clinic-info {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  /* Yumuşak köşeler */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  /* Derinlik efekti */
+  transition: 0.4s;
+  /* Geçiş süresi */
+  width: 100%;
+  /* Tam genişlik */
+}
+
+/* Üst Alan (Video ve Yazı) */
+.upper-container {
+  display: flex;
+  /* Esnek kutu modelini kullan */
+  width: 100%;
+  /* Tam genişlik */
+}
+
+/* Video Kapsayıcı Stili */
+.video-container {
+  position: relative;
+  /* İçerik pozisyonlaması için */
+  width: 50%;
+  /* Genişlik %50 */
+  height: 350px;
+  max-width: 1000px;
+  /* Maksimum genişlik */
+  overflow: hidden;
+  /* Taşmaları gizle */
+  border-radius: 15px;
+  /* Yumuşak köşeler */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  /* Derinlik kazandırma */
+  margin-right: 20px;
+  /* Sağ tarafında boşluk bırak */
+  transition: transform 0.5s ease;
+  /* Geçiş efekti */
+}
+
+/* Video Stili */
+video {
+  width: 100%;
+  /* Tam genişlikte olacak */
+  height: auto;
+  /* Yükseklik otomatik */
+  border-radius: 15px;
+  /* Yumuşak köşeler */
+  transition: transform 0.5s ease, filter 0.5s ease;
+  /* Geçiş efekti */
+}
+
+/* Bilgi Kapsayıcısı */
+.info-container {
+  flex: 1;
+  /* Kalan alanı kapla */
+  background-color: rgba(104, 195, 244, 0.7);
+  /* Arka plan rengi */
+  color: rgb(39, 5, 233);
+  /* Yazı rengi */
+  padding: 20px;
+  /* İçerik için alan */
+  border-radius: 10px;
+  /* Yumuşak köşeler */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  /* Gölgelendirme */
+  transition: transform 0.4s;
+  /* Geçiş süresi */
+  opacity: 0.9;
+  /* Opaklık değeri */
+  margin-top: 5%;
+}
+
+/* Info Container Başlık Stili */
+.info-container h2 {
+  font-size: 2rem;
+  /* Başlık boyutu */
+  margin-bottom: 20px;
+  /* Alt boşluk */
+  text-transform: uppercase;
+  /* Büyük harf dönüşümü */
+  letter-spacing: 2px;
+  /* Harf aralığı */
+  font-family: 'Times New Roman', Times, serif;
+  /* Yazı tipi */
+}
+
+/* Info Container Paragraf Stili */
+.info-container p {
+  font-size: 1.1rem;
+  /* Paragraf boyutu */
+  line-height: 1.6;
+  /* Satır yüksekliği */
+  margin-bottom: 15px;
+  /* Alt boşluk */
+  font-family: 'Times New Roman', Times, serif;
+  /* İtalik yazı */
+}
+
+/* Info Container 3 Stili */
+.info-container3 {
+  background-color: rgba(104, 195, 244, 0.7);
+  /* Arka plan rengi */
+  color: rgb(39, 5, 233);
+  /* Yazı rengi */
+  padding: 20px;
+  /* İçerik için alan */
+  border-radius: 10px;
+  /* Yumuşak köşeler */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  /* Gölgelendirme */
+  transition: transform 0.4s;
+  /* Geçiş süresi */
+  opacity: 0.9;
+  /* Opaklık değeri */
+  width: 50%;
+  /* Genişlik %40 */
+  margin-left: 20px;
+}
+
+/* Alt Alan Stili (Bilgi Kutusu) */
+.info-container3 h2 {
+  margin: 0;
+  /* Tüm marjları sıfırla */
+  font-size: x-large;
+  text-align: center;
+  margin-right: 30px;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+.info-container3 p {
+  margin: 0;
+  /* Tüm marjları sıfırla */
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif;
+
+
+}
+
+/* Bilgi kutusunu hover edildiğinde büyütme efekti */
+.info-container:hover,
+.info-container3:hover {
+  transform: scale(1.02);
+  /* Büyütme efekti */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  /* Gölgelendirme artırımı */
+  background-color: #ffffff;
+}
+
+/* Video Hover Efekti */
+video:hover {
+  transform: scale(1.05);
+  /* Hover ile büyütme */
+  filter: brightness(90%);
+  /* Parlaklığı azaltma */
+}
+
+/* Video Üzerindeki Yazı Stili */
+.video-overlay {
+  position: absolute;
+  /* Video üzerine yerleştirmek için */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Tam genişlik */
+  height: 100%;
+  /* Tam yükseklik */
+  display: flex;
+  /* Esnek kutu */
+  justify-content: center;
+  /* Ortala */
+  align-items: center;
+  /* Merkezde dikey hizalama */
+  background: rgba(0, 0, 0, 0.5);
+  /* Koyu yarı saydam arka plan */
+  color: #ffffff;
+  /* Yazı rengi */
+  font-size: 2rem;
+  /* Yazı boyutu */
+  opacity: 0;
+  /* Başlangıçta görünmez */
+  transition: opacity 0.5s ease;
+  /* Geçiş efekti */
+}
+
+/* Video üzerine gelindiğinde yazıyı görünür yap */
+.video-container:hover .video-overlay {
+  opacity: 1;
+  /* Hover sırasında görünür hale getir */
+}
+
+/* Genel Hover Efekti */
+.clinic-info:hover {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  /* Gölgelendirme artışı */
+}
